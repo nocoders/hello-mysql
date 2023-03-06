@@ -4,32 +4,165 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="" />
+    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/ShardingSphereApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ShardingSphereApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-mysql.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="/usr/local/apache-maven-3.6.3/repository" />
         <option name="mavenHome" value="/usr/local/apache-maven-3.6.3" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="/usr/local/apache-maven-3.6.3/conf/settingsali.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="2MVKvOVB1HzikXl7U1dhYS9Ooip" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shardingSphere/src/main/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shardingSphere/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.study.shardingsphere" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ShardingSohereApplication">
+    <configuration name="generated-requests | #16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" requestIdentifier="#16" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #17" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="17" requestIdentifier="#17" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadWriteTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shardingSphere" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.shardingsphere.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
+      <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ReadWriteTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadWriteTest.testLoadBalancer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shardingSphere" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.shardingsphere.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
+      <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ReadWriteTest" />
+      <option name="METHOD_NAME" value="testLoadBalancer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadWriteTest.testRollBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shardingSphere" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.shardingsphere.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
+      <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ReadWriteTest" />
+      <option name="METHOD_NAME" value="testRollBack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingSohereApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shardingSphere" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.shardingsphere.ShardingSphereApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #17" />
+        <item itemvalue="HTTP Request.generated-requests | #16" />
+        <item itemvalue="JUnit.ReadWriteTest.testLoadBalancer" />
+        <item itemvalue="JUnit.ReadWriteTest.testRollBack" />
+        <item itemvalue="JUnit.ReadWriteTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -42,7 +175,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677847539672</updated>
+      <workItem from="1677847540857" duration="684000" />
+      <workItem from="1677860151063" duration="2937000" />
+      <workItem from="1678085785251" duration="6778000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
