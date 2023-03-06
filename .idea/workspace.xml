@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/ShardingSphereApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ShardingSphereApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-mysql.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="读写分离 及相关事务" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,8 +150,16 @@
       <updated>1677847539672</updated>
       <workItem from="1677847540857" duration="684000" />
       <workItem from="1677860151063" duration="2937000" />
-      <workItem from="1678085785251" duration="6778000" />
+      <workItem from="1678085785251" duration="7105000" />
     </task>
+    <task id="LOCAL-00001" summary="读写分离 及相关事务">
+      <created>1678096354089</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678096354089</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,5 +178,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="读写分离 及相关事务" />
+    <option name="LAST_COMMIT_MESSAGE" value="读写分离 及相关事务" />
   </component>
 </project>
