@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="读写分离 及相关事务" />
+    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="忽略文件">
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-read-write.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,19 +67,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/shardingSphere/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.study.shardingsphere" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShardingSohereApplication">
+  <component name="RunManager" selected="JUnit.ReadWriteTest.testInsertUserAndOrder">
     <configuration name="generated-requests | #16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" requestIdentifier="#16" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #17" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="17" requestIdentifier="#17" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="ReadWriteTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReadWriteTest.testInsertUserAndOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shardingSphere" />
       <extension name="coverage">
         <pattern>
@@ -82,7 +90,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
       <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ReadWriteTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="testInsertUserAndOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReadWriteTest.testInsertUserAndOrder" />
         <item itemvalue="HTTP Request.generated-requests | #17" />
         <item itemvalue="HTTP Request.generated-requests | #16" />
         <item itemvalue="JUnit.ReadWriteTest.testLoadBalancer" />
         <item itemvalue="JUnit.ReadWriteTest.testRollBack" />
-        <item itemvalue="JUnit.ReadWriteTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +158,7 @@
       <updated>1677847539672</updated>
       <workItem from="1677847540857" duration="684000" />
       <workItem from="1677860151063" duration="2937000" />
-      <workItem from="1678085785251" duration="7105000" />
+      <workItem from="1678085785251" duration="10519000" />
     </task>
     <task id="LOCAL-00001" summary="读写分离 及相关事务">
       <created>1678096354089</created>
@@ -159,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678096354089</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="忽略文件">
+      <created>1678096424557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678096424557</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +194,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="读写分离 及相关事务" />
-    <option name="LAST_COMMIT_MESSAGE" value="读写分离 及相关事务" />
+    <MESSAGE value="忽略文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

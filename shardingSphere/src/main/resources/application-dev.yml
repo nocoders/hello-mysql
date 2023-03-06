@@ -1,62 +1,38 @@
 spring:
   shardingsphere:
     mode:
-      # ??????,????Memory?Standalone,Cluster
+      # 运行模式类型,可选配置Memory、Standalone,Cluster
       type: Memory
     datasource:
-      # ??????????????????
-      names: master,slave1,slave2
-      # ??? 1 ????
-      master:
+      # 真实数据源名称，多个数据源用逗号区分
+      names: user,order
+      # 配置第 1 个数据源
+      user:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://localhost:3306/test
+        jdbc-url: jdbc:mysql://localhost:3301/db_user
         username: root
         password: root
-      # ??? 2 ????
-      slave1:
+      # 配置第 2 个数据源
+      order:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://localhost:3307/test
+        jdbc-url: jdbc:mysql://localhost:3302/db_order
         username: root
         password: root
-      # ??? 3 ????
-      slave2:
-        type: com.zaxxer.hikari.HikariDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://localhost:3308/test
-        username: root
-        password: root
-    # ????
     rules:
-      readwrite-splitting:
-        data-sources:
-          # ???????? ? master?slave1?slave2 ????????????
-          rwds:
-            type: Static
-            props:
-              # ??????
-              write-data-source-name: master
-              # ??????????????????
-              read-data-source-names: slave1,slave2
-              # ???????? ??? ??????????????
-            load-balancer-name: alg_random
-        # ????????
-        load-balancers:
-          # ???????
-          alg_round:
-            # ????? JDBC ???? ?????? ????
-            type: ROUND_ROBIN
-          alg_random:
-            # ??????
-            type: RANDOM
-          alg_weight:
-            # ????
-            type: WEIGHT
-            # ????
-            props:
-              slave1: 1
-              slave2: 2
+      sharding:
+        # 标准分片表   由数据源名 + 表名组成，以小数点分隔。多个表以逗号分隔，支持 inline 表达式。
+        # 缺省表示使用已知数据源与逻辑表名称生成数据节点，用于广播表（即每个库中都需要一个同样的表用于关联查询，多为字典表）或只分库不分表且所有库的表结构完全一致的情况
+        # 指定逻辑表 对应数据库中对表
+        tables:
+          # 逻辑表
+          tb_user:
+            # 对应的数据库以及对应的表
+            actual-data-nodes: user.tb_user
+          tb_order:
+            # 对应的数据库（库名为上面的）以及对应的表
+            actual-data-nodes: order.tb_order
     props:
-      # ???????? SQL
+      # 是否在日志中打印 SQL
       sql-show: true

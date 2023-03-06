@@ -1,11 +1,15 @@
 package com.study.shardingsphere;
 
+import com.study.shardingsphere.entity.Order;
 import com.study.shardingsphere.entity.User;
+import com.study.shardingsphere.mapper.OrderMapper;
 import com.study.shardingsphere.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.math.BigDecimal;
 
 /**
  * @author linmeng
@@ -15,6 +19,9 @@ import org.springframework.transaction.annotation.Transactional;
 public class ReadWriteTest {
 	@Autowired
 	private UserMapper userMapper;
+
+	@Autowired
+	private OrderMapper orderMapper;
 
 	@Test
 	public void test(){
@@ -31,7 +38,7 @@ public class ReadWriteTest {
 	}
 
 	@Test
-	// 配置轮训负载均衡
+	// 负载均衡
 	public void testLoadBalancer(){
 
 		userMapper.selectList(null);
@@ -40,5 +47,12 @@ public class ReadWriteTest {
 		userMapper.selectList(null);
 		userMapper.selectList(null);
 		userMapper.selectList(null);
+	}
+	@Test
+	// 垂直分片
+	public void testInsertUserAndOrder() {
+		User user = new User().setUname("哦爱抚");
+		userMapper.insert(user);
+		orderMapper.insert(new Order().setOrderNo("234").setUserId(user.getId()).setAmount(new BigDecimal(1000)));
 	}
 }
