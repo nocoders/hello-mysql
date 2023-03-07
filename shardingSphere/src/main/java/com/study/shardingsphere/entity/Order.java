@@ -17,7 +17,8 @@ import java.math.BigDecimal;
 @Data
 @Accessors(chain = true)
 public class Order {
-	@TableId(type = IdType.AUTO)
+	@TableId(type = IdType.ID_WORKER)
+//	@TableId(type = IdType.AUTO)
 	private Long id;
 	private String orderNo;
 	private Long userId;

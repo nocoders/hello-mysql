@@ -3,9 +3,10 @@ spring:
     mode:
       # 运行模式类型,可选配置Memory、Standalone,Cluster
       type: Memory
+    # 数据源配置
     datasource:
       # 真实数据源名称，多个数据源用逗号区分
-      names: user,order
+      names: user,order0,order1
       # 配置第 1 个数据源
       user:
         type: com.zaxxer.hikari.HikariDataSource
@@ -14,12 +15,20 @@ spring:
         username: root
         password: root
       # 配置第 2 个数据源
-      order:
+      order0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://localhost:3302/db_order
+        jdbc-url: jdbc:mysql://localhost:3310/db_order
         username: root
         password: root
+      # 配置第 3 个数据源
+      order1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3311/db_order
+        username: root
+        password: root
+    # 分片配置
     rules:
       sharding:
         # 标准分片表   由数据源名 + 表名组成，以小数点分隔。多个表以逗号分隔，支持 inline 表达式。
@@ -32,7 +41,52 @@ spring:
             actual-data-nodes: user.tb_user
           tb_order:
             # 对应的数据库（库名为上面的）以及对应的表
-            actual-data-nodes: order.tb_order
+            # actual-data-nodes: order0.tb_order0,order0.tb_order1,order1.tb_order0,order1.tb_order1
+            # 行表达式
+#            actual-data-nodes: order$->{0..1}.tb_order0
+            actual-data-nodes: order$->{0..1}.tb_order$->{0..1}
+            # 分库策略
+            database-strategy:
+              # 用于单分片键的标准分片场景
+              standard:
+                # 分片列名称
+                sharding-column: user_id
+                # 分片算法名称 自定义
+#                sharding-algorithm-name: alg_inline_user_id
+                sharding-algorithm-name: alg_mod
+            # 分表策略
+            table-strategy:
+              # 用于单分片键的标准分片场景
+              standard:
+                # 分片列名称
+                sharding-column: order_no
+                # 分片算法名称 自定义
+                sharding-algorithm-name: alg_hash_mod
+        # 行表达式分片算法
+        sharding-algorithms:
+          alg_inline:
+            # 分片算法类型
+            type: INLINE
+            # 分片算法属性配置
+            props:
+              # 分片算法的行表达式 根据user_id 奇数偶数 判断放入order0还是order1数据库中
+              algorithm-expression: order$->{user_id % 2}
+          # 取模分片算法
+          alg_mod:
+            # 分片算法类型
+            type: MOD
+            # 分片算法属性配置
+            props:
+              # 分片数量
+              sharding-count: 2
+          # Hash取模分片算法
+          alg_hash_mod:
+            # 分片算法类型
+            type: HASH_MOD
+            # 分片算法属性配置
+            props:
+              # 分片数量
+              sharding-count: 2
     props:
       # 是否在日志中打印 SQL
       sql-show: true

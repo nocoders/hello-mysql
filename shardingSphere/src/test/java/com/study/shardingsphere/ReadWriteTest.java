@@ -29,8 +29,9 @@ public class ReadWriteTest {
 		userMapper.insert(user);
 	}
 	@Test
-	@Transactional
-	// 测试方法 直接回滚，添加事务后，添加及查询均使用主库master
+//	@Transactional
+	//读写分离测试  事务测试 添加事务后，测试方法执行完成后直接回滚不往数据库插入数据，直接回滚，
+	// 并且事务添加后 数据添加及查询均使用主库master，不再读写分离
 	public void testRollBack(){
 		User user = new User().setUname("小明2");
 		userMapper.insert(user);
@@ -38,7 +39,7 @@ public class ReadWriteTest {
 	}
 
 	@Test
-	// 负载均衡
+	// 读写分离 负载均衡
 	public void testLoadBalancer(){
 
 		userMapper.selectList(null);
@@ -47,12 +48,5 @@ public class ReadWriteTest {
 		userMapper.selectList(null);
 		userMapper.selectList(null);
 		userMapper.selectList(null);
-	}
-	@Test
-	// 垂直分片
-	public void testInsertUserAndOrder() {
-		User user = new User().setUname("哦爱抚");
-		userMapper.insert(user);
-		orderMapper.insert(new Order().setOrderNo("234").setUserId(user.getId()).setAmount(new BigDecimal(1000)));
 	}
 }
