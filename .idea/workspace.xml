@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="垂直分片 路由不同库的user order表">
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-垂直分片.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ShardingTest.java" afterDir="false" />
+    <list default="true" id="baf27af4-a30f-4603-b1de-7b5a278b5a03" name="Changes" comment="水平分片">
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/Dict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/DictMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/OrderItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/vo/OrderVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/main/java/com/study/shardingsphere/mapper/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ReadWriteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ShardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingSphere/src/test/java/com/study/shardingsphere/ShardingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,24 +77,8 @@
       <recent name="com.study.shardingsphere" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShardingTest.testShardingSelectAll">
-    <configuration name="ReadWriteTest.testInsertUserAndOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shardingSphere" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.study.shardingsphere.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
-      <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ReadWriteTest" />
-      <option name="METHOD_NAME" value="testInsertUserAndOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShardingTest.testInsertOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ShardingTest.testBroadcast">
+    <configuration name="ShardingTest.testBroadcast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shardingSphere" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +88,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
       <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ShardingTest" />
-      <option name="METHOD_NAME" value="testInsertOrder" />
+      <option name="METHOD_NAME" value="testBroadcast" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShardingTest.testInsertOrderDatabaseStrategy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShardingTest.testGetOrderAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shardingSphere" />
       <extension name="coverage">
         <pattern>
@@ -116,7 +104,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
       <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ShardingTest" />
-      <option name="METHOD_NAME" value="testInsertOrderDatabaseStrategy" />
+      <option name="METHOD_NAME" value="testGetOrderAmount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,6 +121,22 @@
       <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
       <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ShardingTest" />
       <option name="METHOD_NAME" value="testInsertOrderTableStrategy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingTest.testShardingInsertOrderInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shardingSphere" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.shardingsphere.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.shardingsphere" />
+      <option name="MAIN_CLASS_NAME" value="com.study.shardingsphere.ShardingTest" />
+      <option name="METHOD_NAME" value="testShardingInsertOrderInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShardingTest.testShardingSelectAll" />
+        <item itemvalue="JUnit.ShardingTest.testBroadcast" />
+        <item itemvalue="JUnit.ShardingTest.testGetOrderAmount" />
+        <item itemvalue="JUnit.ShardingTest.testShardingInsertOrderInfo" />
         <item itemvalue="JUnit.ShardingTest.testInsertOrderTableStrategy" />
-        <item itemvalue="JUnit.ShardingTest.testInsertOrderDatabaseStrategy" />
-        <item itemvalue="JUnit.ShardingTest.testInsertOrder" />
-        <item itemvalue="JUnit.ReadWriteTest.testInsertUserAndOrder" />
+        <item itemvalue="JUnit.ShardingTest.testShardingSelectAll" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +188,7 @@
       <updated>1677847539672</updated>
       <workItem from="1677847540857" duration="684000" />
       <workItem from="1677860151063" duration="2937000" />
-      <workItem from="1678085785251" duration="20473000" />
+      <workItem from="1678085785251" duration="26669000" />
     </task>
     <task id="LOCAL-00001" summary="读写分离 及相关事务">
       <created>1678096354089</created>
@@ -207,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678114959745</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="水平分片">
+      <created>1678204282362</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678204282362</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +240,7 @@
     <MESSAGE value="读写分离 及相关事务" />
     <MESSAGE value="忽略文件" />
     <MESSAGE value="垂直分片 路由不同库的user order表" />
-    <option name="LAST_COMMIT_MESSAGE" value="垂直分片 路由不同库的user order表" />
+    <MESSAGE value="水平分片" />
+    <option name="LAST_COMMIT_MESSAGE" value="水平分片" />
   </component>
 </project>
